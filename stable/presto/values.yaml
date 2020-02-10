@@ -19,6 +19,14 @@ server:
       type: "UseG1GC"
       g1:
         heapRegionSize: "32M"
+  catalog: {}
+    # Specifies either secretName or data.
+    # if it contains sensitive data in your connector config, please using external secret
+    # then specify secretName here. Or just leave connector config under .data.
+    # secretName: ## provide secret name to populate catalog
+    # data: ## provide properties files as entry name and file content as value
+    #   foo.properties: |
+    #     foo=bar
 
 image:
   repository: bivas/presto

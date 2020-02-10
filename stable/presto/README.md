@@ -31,3 +31,8 @@ $ helm install --name my-release -f values.yaml stable/presto
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+| `server.catalog.secretName` | Secret name that contains presto connectors configuration | `nil` |
+| `server.catalog.data` | Inline presto connectors configuration | `nil` |
